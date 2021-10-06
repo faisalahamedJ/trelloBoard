@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(0, 183, 255);
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.createPanelContainer{
+    padding: 1rem;
+    width: 20%;
+    position: relative;
+    margin: auto;
+}
+
+.createPanelInputContainer{
+    position: absolute;
+    top: 1rem;
+    width: 100%;
+    height: 110px;
+    background-color: rgb(0, 112, 177);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    display: flex;
+    z-index: 1;
+}
+.createPanelInput{
+    color: white;
+}
+
+.createPanelInput::placeholder{
+    color: rgba(200, 200, 200, .7);
+}
+
+
+.createPanelBtn, .createBtn{
+    width: 75%;
+    padding: .5rem 1rem;
+    background: rgb(0, 92, 129);
+    cursor: pointer;
+    border-radius: 5px;
+    color: rgb(235, 235, 235);
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+.msg{
+    color: rgb(126, 0, 0);
+    display: none;
+    transform: translateX(-10%);
+    transition: linear 1s;
+}
+
+
+
+.panel{
+    position: relative;
+    min-width: 300px;
+    margin: 3rem auto;
+    min-height: 250px;
+    background-color: rgb(190, 190, 190);
+    padding: 1rem 1rem 2rem;
+}
+
+.addCardBtn{
+    position: absolute;
+    bottom: .5rem;
+    cursor: pointer;
+    padding: .1rem;
+}
+.addCardBtn:hover{
+    color: rgb(114, 114, 114);
+}
+
+.cardBox{
+    position: absolute;    
+    width: 90%;
+    height: 200px;
+    background-color: azure;
+    bottom: 0;
+    left: 0;
+    transform: translate(0%, -50%);
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    display: none;
+    z-index: 10;
+}
+
+.card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.eachCard{
+    padding: .5rem .2rem;
+    width: 100%;
+    background: white;
+    border-radius: .1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+input[type=text]{
+    width: 70%;
+    padding: 1rem .5rem .5rem;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #000 ;
+}
+
+.imgUploader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+}
+.imgUploader>span{  
+    cursor: pointer;
+}
+
+
+
+.cardSubmitBtn{
+    padding: .3rem 1rem;
+    background-color: teal;
+    display: inline;
+    cursor: pointer;
+    border-radius: .3rem;
+}
+
+
+.cross{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.dragging{
+    opacity: .5;
+    cursor: move;
+}
+
+.thumbnail{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
